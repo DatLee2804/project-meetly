@@ -1,0 +1,41 @@
+[
+  {"id": 1, "meetingId FK": 1, "userId FK": 1, "rsvpStatus": "Yes"},
+  {"id": 2, "meetingId FK": 1, "userId FK": 2, "rsvpStatus": "Yes"},
+  {"id": 3, "meetingId FK": 1, "userId FK": 11, "rsvpStatus": "Yes"},
+  {"id": 4, "meetingId FK": 1, "userId FK": 16, "rsvpStatus": "Tentative"},
+
+  {"id": 5, "meetingId FK": 2, "userId FK": 3, "rsvpStatus": "Yes"},
+  {"id": 6, "meetingId FK": 2, "userId FK": 4, "rsvpStatus": "Yes"},
+  {"id": 7, "meetingId FK": 2, "userId FK": 12, "rsvpStatus": "Yes"},
+
+  {"id": 8, "meetingId FK": 3, "userId FK": 5, "rsvpStatus": "Yes"},
+  {"id": 9, "meetingId FK": 3, "userId FK": 6, "rsvpStatus": "Yes"},
+  {"id": 10, "meetingId FK": 3, "userId FK": 13, "rsvpStatus": "Yes"},
+  {"id": 11, "meetingId FK": 3, "userId FK": 20, "rsvpStatus": "No"},
+
+  {"id": 12, "meetingId FK": 4, "userId FK": 7, "rsvpStatus": "Yes"},
+  {"id": 13, "meetingId FK": 4, "userId FK": 8, "rsvpStatus": "Yes"},
+
+  {"id": 14, "meetingId FK": 5, "userId FK": 9, "rsvpStatus": "Yes"},
+  {"id": 15, "meetingId FK": 5, "userId FK": 10, "rsvpStatus": "Yes"},
+  {"id": 16, "meetingId FK": 5, "userId FK": 17, "rsvpStatus": "Yes"},
+
+  {"id": 17, "meetingId FK": 6, "userId FK": 1, "rsvpStatus": "Yes"},
+  {"id": 18, "meetingId FK": 6, "userId FK": 12, "rsvpStatus": "Yes"},
+  {"id": 19, "meetingId FK": 6, "userId FK": 11, "rsvpStatus": "Tentative"},
+
+  {"id": 20, "meetingId FK": 7, "userId FK": 13, "rsvpStatus": "Yes"},
+  {"id": 21, "meetingId FK": 7, "userId FK": 14, "rsvpStatus": "Yes"},
+  {"id": 22, "meetingId FK": 7, "userId FK": 18, "rsvpStatus": "Yes"},
+
+  {"id": 23, "meetingId FK": 8, "userId FK": 15, "rsvpStatus": "Yes"},
+  {"id": 24, "meetingId FK": 8, "userId FK": 16, "rsvpStatus": "Yes"},
+  {"id": 25, "meetingId FK": 8, "userId FK": 19, "rsvpStatus": "Yes"},
+
+  {"id": 26, "meetingId FK": 9, "userId FK": 17, "rsvpStatus": "Yes"},
+  {"id": 27, "meetingId FK": 9, "userId FK": 18, "rsvpStatus": "Yes"},
+  {"id": 28, "meetingId FK": 9, "userId FK": 20, "rsvpStatus": "Yes"},
+
+  {"id": 29, "meetingId FK": 10, "userId FK": 19, "rsvpStatus": "Yes"},
+  {"id": 30, "meetingId FK": 10, "userId FK": 20, "rsvpStatus": "Yes"}
+]

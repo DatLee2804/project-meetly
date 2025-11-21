@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "content": "Project Apollo scope and key deliverables were finalized. Task ownership assigned. Follow-up on server security (Task 12) needed.",
+    "meetingId FK": 1,
+    "aiModel": null,
+    "createById FK": 2,
+    "createAt": "2023-01-05T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "content": "The team chose a path for the navigation algorithm, prioritizing stability over initial performance. External library integration is the next step.",
+    "meetingId FK": 2,
+    "aiModel": "NLP-Summary-v1.0",
+    "createById FK": 4,
+    "createAt": "2023-02-10T16:00:00Z"
+  },
+  {
+    "id": 3,
+    "content": "Action plan created to research and develop solar-capture improvements. Budget allocation review scheduled.",
+    "meetingId FK": 3,
+    "aiModel": null,
+    "createById FK": 6,
+    "createAt": "2023-03-25T11:00:00Z"
+  },
+  {
+    "id": 4,
+    "content": "Agile Scrum was adopted for Delta project development. Training is mandatory for all team members.",
+    "meetingId FK": 4,
+    "aiModel": "NLP-Summary-v1.0",
+    "createById FK": 8,
+    "createAt": "2023-01-28T17:00:00Z"
+  },
+  {
+    "id": 5,
+    "content": "The AI model selection process concluded with a decision to use both LSTM and Transformer models for different prediction horizons.",
+    "meetingId FK": 5,
+    "aiModel": null,
+    "createById FK": 10,
+    "createAt": "2023-05-01T13:00:00Z"
+  },
+  {
+    "id": 6,
+    "content": "Testing protocols for the biotech product were finalized, with an emphasis on a larger sample size requirement.",
+    "meetingId FK": 6,
+    "aiModel": "NLP-Summary-v1.0",
+    "createById FK": 12,
+    "createAt": "2023-03-05T15:00:00Z"
+  },
+  {
+    "id": 7,
+    "content": "The team is proceeding to prototype production for the AI-optimized golf equipment based on positive feedback.",
+    "meetingId FK": 7,
+    "aiModel": null,
+    "createById FK": 14,
+    "createAt": "2023-05-20T12:30:00Z"
+  },
+  {
+    "id": 8,
+    "content": "A migration strategy to PostgreSQL was approved. The target completion is Q4, pending detailed backup plan finalization.",
+    "meetingId FK": 8,
+    "aiModel": "NLP-Summary-v1.0",
+    "createById FK": 16,
+    "createAt": "2023-04-05T17:00:00Z"
+  },
+  {
+    "id": 9,
+    "content": "The schedule for the infrastructure upgrade was set to occur only during weekend low-traffic hours.",
+    "meetingId FK": 9,
+    "aiModel": null,
+    "createById FK": 18,
+    "createAt": "2023-06-15T11:45:00Z"
+  },
+  {
+    "id": 10,
+    "content": "MFA implementation was identified as the highest priority security enhancement.",
+    "meetingId FK": 10,
+    "aiModel": "NLP-Summary-v1.0",
+    "createById FK": 20,
+    "createAt": "2023-07-10T13:00:00Z"
+  }
+]

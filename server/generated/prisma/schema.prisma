@@ -1,0 +1,228 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId            Int     @id @default(autoincrement())
+  cognitoId         String  @unique
+  username          String  @unique
+  profilePictureUrl String?
+  teamId            Int?
+
+  // --- QUAN HỆ MỚI ---
+  teamMemberships TeamMember[]     @relation("Membership") // Team N-N
+  taskAssignments TaskAssignment[] // N-N với Task qua TaskAssignment
+  uploadedFiles   Attachment[]     @relation("UploadedBy") // 1-N với Attachment
+  comments        Comment[] // 1-N với Comment
+
+  createdMeetings  Meeting[]            @relation("CreatedMeetings")
+  authoredNotes    MeetingNote[]        @relation("AuthoredMeetingNotes")
+  createdSummaries MeetingSummary[]     @relation("CreatedMeetingSummaries")
+  attendedMeetings MeetingParticipant[] @relation("AttendedMeetings") // Meeting N-N
+}
+
+model Team {
+  id                   Int    @id @default(autoincrement())
+  teamName             String
+  productOwnerUserId   Int?
+  projectManagerUserId Int?
+
+  // --- QUAN HỆ MỚI ---
+  meetings Meeting[]
+  members  TeamMember[]
+}
+
+model Project {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  startDate   DateTime?
+  endDate     DateTime?
+
+  // --- QUAN HỆ MỚI ---
+  meetings Meeting[]
+}
+
+model Task {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String?
+
+  // Đã CHUYỂN đổi từ String sang FK:
+  // status         String? // Bỏ
+  // priority       String? // Bỏ
+  statusId   Int? // FK cho TaskStatus
+  priorityId Int? // FK cho TaskPriority
+
+  tags      String?
+  startDate DateTime?
+  dueDate   DateTime?
+  points    Int?
+
+  // Khóa ngoại
+  projectId      Int
+  authorUserId   Int
+  assignedUserId Int?
+
+  // --- QUAN HỆ MỚI ---
+  statusRelation   TaskStatus?      @relation("statusRelation", fields: [statusId], references: [id])
+  priorityRelation TaskPriority?    @relation("priorityRelation", fields: [priorityId], references: [id])
+  assignments      TaskAssignment[] // 1-N với TaskAssignment
+  attachments      Attachment[] // 1-N với Attachment
+  comments         Comment[] // 1-N với Comment
+}
+
+model TaskAssignment {
+  id     Int @id @default(autoincrement())
+  userId Int
+  taskId Int
+
+  user User @relation(fields: [userId], references: [userId])
+  task Task @relation(fields: [taskId], references: [id])
+
+  // Ràng buộc: Đảm bảo một cặp (User, Task) là duy nhất
+  @@unique([userId, taskId])
+}
+
+model Attachment {
+  id           Int     @id @default(autoincrement())
+  fileURL      String
+  fileName     String?
+  taskId       Int
+  uploadedById Int
+
+  task       Task @relation(fields: [taskId], references: [id])
+  uploadedBy User @relation("UploadedBy", fields: [uploadedById], references: [userId])
+}
+
+model Comment {
+  id     Int    @id @default(autoincrement())
+  text   String
+  taskId Int
+  userId Int
+
+  task Task @relation(fields: [taskId], references: [id])
+  user User @relation(fields: [userId], references: [userId])
+}
+
+/// Bảng tham chiếu cho Trạng thái Nhiệm vụ
+model TaskStatus {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  orderIndex  Int
+  description String?
+
+  tasks Task[] @relation("statusRelation")
+}
+
+/// Bảng tham chiếu cho Độ ưu tiên Nhiệm vụ
+model TaskPriority {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  colorCode   String? // Ví dụ: #E74C3C
+  description String?
+
+  tasks Task[] @relation("priorityRelation")
+}
+
+/// Bảng trung gian cho Thành viên Team (N-N giữa User và Team)
+model TeamMember {
+  id   Int     @id @default(autoincrement())
+  role String? // Vai trò của User trong Team
+
+  teamId Int
+  userId Int
+
+  team Team @relation(fields: [teamId], references: [id])
+  user User @relation("Membership", fields: [userId], references: [userId])
+
+  @@unique([teamId, userId])
+}
+
+/// Bảng Meeting (Cuộc họp)
+model Meeting {
+  id           Int      @id @default(autoincrement())
+  title        String
+  description  String?
+  meetingURL   String?
+  recordingURL String?
+  startTime    DateTime
+  endTime      DateTime
+
+  // Khóa ngoại
+  teamId     Int
+  projectId  Int
+  createById Int
+
+  // Mối quan hệ 1-N
+  team    Team    @relation(fields: [teamId], references: [id])
+  project Project @relation(fields: [projectId], references: [id])
+  creator User    @relation("CreatedMeetings", fields: [createById], references: [userId])
+
+  // Mối quan hệ 1-N với Ghi chú, Tóm tắt, Người tham gia
+  notes        MeetingNote[]
+  summaries    MeetingSummary[]
+  participants MeetingParticipant[]
+}
+
+/// Bảng MeetingNote (Ghi chú Cuộc họp)
+model MeetingNote {
+  id       Int      @id @default(autoincrement())
+  content  String
+  createAt DateTime @default(now())
+
+  // Khóa ngoại
+  meetingId Int
+  authorId  Int
+
+  // Mối quan hệ
+  meeting Meeting @relation(fields: [meetingId], references: [id])
+  author  User    @relation("AuthoredMeetingNotes", fields: [authorId], references: [userId])
+}
+
+/// Bảng MeetingSummary (Tóm tắt Cuộc họp)
+model MeetingSummary {
+  id       Int      @id @default(autoincrement())
+  content  String
+  aiModel  String? // Tên model AI nếu tóm tắt được tạo tự động
+  createAt DateTime @default(now())
+
+  // Khóa ngoại
+  meetingId  Int
+  createById Int
+
+  // Mối quan hệ
+  meeting Meeting @relation(fields: [meetingId], references: [id])
+  creator User    @relation("CreatedMeetingSummaries", fields: [createById], references: [userId])
+
+  // Ràng buộc UNIQUE: mỗi Meeting chỉ có 1 Summary
+  @@unique([meetingId])
+}
+
+/// Bảng trung gian cho Người tham gia Cuộc họp (N-N giữa User và Meeting)
+model MeetingParticipant {
+  id         Int     @id @default(autoincrement())
+  rsvpStatus String? // Ví dụ: 'Yes', 'No', 'Tentative'
+
+  // Khóa ngoại
+  meetingId Int
+  userId    Int
+
+  // Mối quan hệ
+  meeting Meeting @relation(fields: [meetingId], references: [id])
+  user    User    @relation("AttendedMeetings", fields: [userId], references: [userId])
+
+  @@unique([meetingId, userId])
+}

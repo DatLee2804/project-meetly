@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Low",
+    "colorCode": "#CCCCCC",
+    "description": "Ưu tiên thấp, có thể xử lý sau."
+  },
+  {
+    "id": 2,
+    "name": "Medium",
+    "colorCode": "#3498DB",
+    "description": "Ưu tiên trung bình, nên xử lý trong tuần này."
+  },
+  {
+    "id": 3,
+    "name": "High",
+    "colorCode": "#F39C12",
+    "description": "Ưu tiên cao, cần xử lý sớm."
+  },
+  {
+    "id": 4,
+    "name": "Urgent",
+    "colorCode": "#E74C3C",
+    "description": "Khẩn cấp, cần xử lý ngay lập tức."
+  }
+]

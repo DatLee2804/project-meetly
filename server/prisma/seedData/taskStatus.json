@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "To Do",
+    "orderIndex": 1,
+    "description": "Nhiệm vụ chưa được bắt đầu."
+  },
+  {
+    "id": 2,
+    "name": "In Progress",
+    "orderIndex": 2,
+    "description": "Nhiệm vụ đang được thực hiện."
+  },
+  {
+    "id": 3,
+    "name": "Testing",
+    "orderIndex": 3,
+    "description": "Nhiệm vụ đã hoàn thành nhưng đang chờ kiểm thử."
+  },
+  {
+    "id": 4,
+    "name": "Done",
+    "orderIndex": 4,
+    "description": "Nhiệm vụ đã hoàn thành và được phê duyệt."
+  },
+  {
+    "id": 5,
+    "name": "Blocked",
+    "orderIndex": 5,
+    "description": "Nhiệm vụ bị chặn bởi các yếu tố bên ngoài."
+  }
+]

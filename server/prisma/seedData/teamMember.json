@@ -1,0 +1,26 @@
+[
+  {"id": 1, "teamId FK": 1, "userId FK": 1, "role": "Backend Developer"},
+  {"id": 2, "teamId FK": 1, "userId FK": 11, "role": "QA Specialist"},
+  {"id": 3, "teamId FK": 1, "userId FK": 16, "role": "Frontend Developer"},
+  {"id": 4, "teamId FK": 1, "userId FK": 17, "role": "Designer"},
+
+  {"id": 5, "teamId FK": 2, "userId FK": 2, "role": "Data Scientist"},
+  {"id": 6, "teamId FK": 2, "userId FK": 12, "role": "AI Engineer"},
+  {"id": 7, "teamId FK": 2, "userId FK": 18, "role": "Research Analyst"},
+  {"id": 8, "teamId FK": 2, "userId FK": 19, "role": "Technical Writer"},
+
+  {"id": 9, "teamId FK": 3, "userId FK": 3, "role": "DevOps Engineer"},
+  {"id": 10, "teamId FK": 3, "userId FK": 13, "role": "Systems Architect"},
+  {"id": 11, "teamId FK": 3, "userId FK": 20, "role": "Cloud Specialist"},
+  {"id": 12, "teamId FK": 3, "userId FK": 14, "role": "Network Engineer"},
+
+  {"id": 13, "teamId FK": 4, "userId FK": 4, "role": "Mobile Developer"},
+  {"id": 14, "teamId FK": 4, "userId FK": 5, "role": "Product Analyst"},
+  {"id": 15, "teamId FK": 4, "userId FK": 6, "role": "UX Researcher"},
+  {"id": 16, "teamId FK": 4, "userId FK": 7, "role": "Tester"},
+
+  {"id": 17, "teamId FK": 5, "userId FK": 8, "role": "Security Engineer"},
+  {"id": 18, "teamId FK": 5, "userId FK": 9, "role": "Support Specialist"},
+  {"id": 19, "teamId FK": 5, "userId FK": 10, "role": "Documentation Lead"},
+  {"id": 20, "teamId FK": 5, "userId FK": 15, "role": "Scrum Master"}
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Apollo Project Kickoff",
+    "description": "Initial meeting to define scope and team roles for Project Apollo.",
+    "meetingURL": "https://meet.link/apollo_kickoff",
+    "recordingURL": "https://record.link/apollo_kickoff_r",
+    "startTime": "2023-01-05T10:00:00Z",
+    "endTime": "2023-01-05T11:00:00Z",
+    "teamId FK": 1,
+    "projectId FK": 1,
+    "createById FK": 1
+  },
+  {
+    "id": 2,
+    "title": "Beacon Algorithm Review",
+    "description": "Detailed technical discussion on navigation algorithm implementation.",
+    "meetingURL": "https://meet.link/beacon_algo",
+    "recordingURL": null,
+    "startTime": "2023-02-10T14:30:00Z",
+    "endTime": "2023-02-10T15:30:00Z",
+    "teamId FK": 2,
+    "projectId FK": 2,
+    "createById FK": 3
+  },
+  {
+    "id": 3,
+    "title": "Catalyst Energy Solutions Brainstorm",
+    "description": "Brainstorming session for new renewable energy generation methods.",
+    "meetingURL": "https://meet.link/catalyst_brain",
+    "recordingURL": "https://record.link/catalyst_brain_r",
+    "startTime": "2023-03-25T09:00:00Z",
+    "endTime": "2023-03-25T10:00:00Z",
+    "teamId FK": 3,
+    "projectId FK": 3,
+    "createById FK": 5
+  },
+  {
+    "id": 4,
+    "title": "Delta Workflow Planning",
+    "description": "Planning and outlining the new software development workflows.",
+    "meetingURL": null,
+    "recordingURL": null,
+    "startTime": "2023-01-28T16:00:00Z",
+    "endTime": "2023-01-28T16:45:00Z",
+    "teamId FK": 4,
+    "projectId FK": 4,
+    "createById FK": 7
+  },
+  {
+    "id": 5,
+    "title": "Echo AI Model Selection",
+    "description": "Decision making on which AI models to use for project predictions.",
+    "meetingURL": "https://meet.link/echo_ai",
+    "recordingURL": "https://record.link/echo_ai_r",
+    "startTime": "2023-05-01T11:00:00Z",
+    "endTime": "2023-05-01T12:00:00Z",
+    "teamId FK": 5,
+    "projectId FK": 5,
+    "createById FK": 9
+  },
+  {
+    "id": 6,
+    "title": "Foxtrot Testing Protocols",
+    "description": "Reviewing and finalizing biotech product testing protocols.",
+    "meetingURL": null,
+    "recordingURL": null,
+    "startTime": "2023-03-05T13:00:00Z",
+    "endTime": "2023-03-05T14:00:00Z",
+    "teamId FK": 1,
+    "projectId FK": 6,
+    "createById FK": 11
+  },
+  {
+    "id": 7,
+    "title": "Golf Optimization Feedback",
+    "description": "Gathering feedback on initial AI optimization results for golf equipment.",
+    "meetingURL": "https://meet.link/golf_feedback",
+    "recordingURL": "https://record.link/golf_feedback_r",
+    "startTime": "2023-05-20T10:30:00Z",
+    "endTime": "2023-05-20T11:30:00Z",
+    "teamId FK": 2,
+    "projectId FK": 7,
+    "createById FK": 13
+  },
+  {
+    "id": 8,
+    "title": "Hotel Database Migration Strategy",
+    "description": "Planning the strategy and timeline for the database overhaul.",
+    "meetingURL": "https://meet.link/hotel_db_strat",
+    "recordingURL": null,
+    "startTime": "2023-04-05T15:00:00Z",
+    "endTime": "2023-04-05T16:00:00Z",
+    "teamId FK": 3,
+    "projectId FK": 8,
+    "createById FK": 15
+  },
+  {
+    "id": 9,
+    "title": "India Infrastructure Update",
+    "description": "Status meeting on the telecommunication infrastructure upgrade progress.",
+    "meetingURL": "https://meet.link/india_infra",
+    "recordingURL": "https://record.link/india_infra_r",
+    "startTime": "2023-06-15T10:00:00Z",
+    "endTime": "2023-06-15T10:45:00Z",
+    "teamId FK": 4,
+    "projectId FK": 9,
+    "createById FK": 17
+  },
+  {
+    "id": 10,
+    "title": "Juliet Security Review",
+    "description": "Reviewing proposed enhancements to cyber-security protocols.",
+    "meetingURL": "https://meet.link/juliet_sec",
+    "recordingURL": null,
+    "startTime": "2023-07-10T11:00:00Z",
+    "endTime": "2023-07-10T12:00:00Z",
+    "teamId FK": 5,
+    "projectId FK": 10,
+    "createById FK": 19
+  }
+]

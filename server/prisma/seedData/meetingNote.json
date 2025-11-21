@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "content": "Agreed on 4 main milestones. BobSmith will handle server security updates (Task 12).",
+    "meetingId FK": 1,
+    "authorId FK": 2,
+    "createAt": "2023-01-05T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "content": "Need to integrate a more stable external library for the core navigation logic.",
+    "meetingId FK": 2,
+    "authorId FK": 4,
+    "createAt": "2023-02-10T14:45:00Z"
+  },
+  {
+    "id": 3,
+    "content": "Action Item: Research solar-capture efficiency improvements (Task 3). Check R&D budget status.",
+    "meetingId FK": 3,
+    "authorId FK": 6,
+    "createAt": "2023-03-25T09:30:00Z"
+  },
+  {
+    "id": 4,
+    "content": "Adopted Agile/Scrum framework for new projects. Need to schedule a training for the team.",
+    "meetingId FK": 4,
+    "authorId FK": 8,
+    "createAt": "2023-01-28T16:15:00Z"
+  },
+  {
+    "id": 5,
+    "content": "Decision made: Use LSTM models for short-term predictions; Transformer models for long-term (Task 5).",
+    "meetingId FK": 5,
+    "authorId FK": 10,
+    "createAt": "2023-05-01T11:30:00Z"
+  },
+  {
+    "id": 6,
+    "content": "Increased sample size required for safety testing phase.",
+    "meetingId FK": 6,
+    "authorId FK": 12,
+    "createAt": "2023-03-05T13:40:00Z"
+  },
+  {
+    "id": 7,
+    "content": "Optimization results are promising. Next step: prototype production (Task 7).",
+    "meetingId FK": 7,
+    "authorId FK": 14,
+    "createAt": "2023-05-20T10:50:00Z"
+  },
+  {
+    "id": 8,
+    "content": "Migrate to PostgreSQL. Target completion Q4. Need a detailed backup plan.",
+    "meetingId FK": 8,
+    "authorId FK": 16,
+    "createAt": "2023-04-05T15:20:00Z"
+  },
+  {
+    "id": 9,
+    "content": "Infrastructure upgrade schedule confirmed: weekends only to minimize disruption.",
+    "meetingId FK": 9,
+    "authorId FK": 18,
+    "createAt": "2023-06-15T10:25:00Z"
+  },
+  {
+    "id": 10,
+    "content": "Prioritize multi-factor authentication implementation across all internal tools (Task 10).",
+    "meetingId FK": 10,
+    "authorId FK": 20,
+    "createAt": "2023-07-10T11:45:00Z"
+  },
+  {
+    "id": 11,
+    "content": "Need to follow up with FrankWright on the design mockup review.",
+    "meetingId FK": 1,
+    "authorId FK": 1,
+    "createAt": "2023-01-05T10:30:00Z"
+  },
+  {
+    "id": 12,
+    "content": "LauraAdams suggested a microservice architecture for the next phase.",
+    "meetingId FK": 2,
+    "authorId FK": 11,
+    "createAt": "2023-02-10T15:00:00Z"
+  },
+  {
+    "id": 13,
+    "content": "Check regional regulatory requirements for energy storage solutions.",
+    "meetingId FK": 3,
+    "authorId FK": 13,
+    "createAt": "2023-03-25T09:45:00Z"
+  },
+  {
+    "id": 14,
+    "content": "The new workflow includes daily standups and bi-weekly retrospectives.",
+    "meetingId FK": 4,
+    "authorId FK": 15,
+    "createAt": "2023-01-28T16:30:00Z"
+  },
+  {
+    "id": 15,
+    "content": "NormanBates will lead the cloud security migration task (Task 16).",
+    "meetingId FK": 5,
+    "authorId FK": 17,
+    "createAt": "2023-05-01T11:45:00Z"
+  }
+]
